@@ -5,6 +5,8 @@
  */
 package tela;
 
+import java.util.Locale;
+
 /**
  *
  * @author pretto
@@ -34,8 +36,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItemProduto = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -70,17 +72,18 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
-        jMenuItemProduto.setText("Produto");
-        jMenuItemProduto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemProdutoActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItemProduto);
-
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("XXX");
+        jMenu2.setText("Movimentações");
+
+        jMenuItem4.setText("Compra");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Ajuda");
@@ -131,14 +134,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         ifrCliente.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-    private void jMenuItemProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoActionPerformed
-        IfrProduto ifrProduto = new IfrProduto();
-        
-        jDesktopPane1.add(ifrProduto);
-        
-        ifrProduto.setVisible(true);
-        
-    }//GEN-LAST:event_jMenuItemProdutoActionPerformed
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        IfrCompra ifrOS = new IfrCompra();
+        jDesktopPane1.add((ifrOS));
+        ifrOS.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,6 +184,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItemProduto;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
